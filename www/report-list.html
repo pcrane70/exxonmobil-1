@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title> 
+    </head> 
+    <body>
+        <div id="page">
+            <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><p class="navbar-text" id="servDate"></p></li>
+                            <li><p class="navbar-text" id="reportsCount">0 Jobs</p></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" onclick="decServDate();"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                            <li><a href="#" onclick="incServDate();"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="content" class="panel-list-container">
+                <div id="panelList"></div>
+            </div>
+            <nav id="footer-nav" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+              <div class="container">
+				<div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                      <li><a href="#" onclick="changePage('report-search.html',['report-search.js'])">Search</a></li>
+                      <li class="userLevel2 userLevel3" style="display:none;">
+                        <a href="#" onclick="changePage('report-approval.html',['report-approval.js'])">
+                          Approval (<span id="approvalsCount">0</span>)
+                        </a>
+                      </li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#" onclick="userLogout(event);">Logout</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="#" onclick="changePage('report-list.html',['report-list.js'])">
+                              <span class="glyphicon glyphicon-refresh"></span>
+                          </a>
+                      </li>
+                  </ul> 
+                </div><!--/.nav-collapse -->
+              </div>
+            </nav>
+
+            <div id="projectNamesModal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h3 class="modal-title">Project Names</h3>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- myModal -->
+
+            <style>
+                .modal-body li
+                {
+                    margin: 1em 0;
+                }
+            </style>
+
+        </div>
+    </body>
+</html>

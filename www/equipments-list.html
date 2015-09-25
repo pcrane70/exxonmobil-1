@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="page">
+            <div id="header">
+                <div class="buttonH">
+                    <input type="button" onclick="changePage('activity-equipment.html',['jquery.touch-multiselect.js','activity-equipment.js']);" value="" style="background: transparent url('img/ic_action_previous_item.png') no-repeat center center;"> 
+                </div>
+                <div class="titleH">
+                    <span>Equipments list</span>
+                </div>
+            </div>
+            <div id="content">
+                <div class="row">
+                    <h1 id="eqCatName"></h1>
+                    <div>
+                        <select multiple="multiple" id="eqTypeID" name="eqTypeID" class="multiple" size="10">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <a href="#" onclick="event.preventDefault();changePage('activity-measure.html',['activity-measure.js']);">Measure</a> 
+                <a href="#" onclick="event.preventDefault();changePage('activity-location.html',['activity-location.js']);">Location</a> 
+                <a href="#" onclick="event.preventDefault();changePage('activity-equipment.html',['jquery.touch-multiselect.js','activity-equipment.js']);">Equipment</a> 
+                <a href="#" onclick="event.preventDefault();changePage('activity-misc.html',['picker.js','picker.date.js','picker.time.js','activity-misc.js']);">Misc</a>
+        	</div>
+    	</div>
+    </body>
+</html>

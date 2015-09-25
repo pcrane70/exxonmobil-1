@@ -1,0 +1,60 @@
+
+// global variables
+
+/**
+ * Possibile URLs are:
+ * - LIVE: http://fda.orleaninvest.com/datacenter_fda
+ * - TRAINING: http://fda.orleaninvest.com/datacenter_test_fda
+ *
+ * or custom link if you need to test it on a personal API...
+ */
+var baseUrl = "http://fda.orleaninvest.com/datacenter_test_fda"; // pay attention for the LIVE
+
+/**
+ * Possible userRolePrefix are:
+ * - addax
+ * - afren
+ * - agip
+ * - chevron
+ * - exxon
+ * - shell
+ * - total
+ * - npdc
+ */
+var userRolePrefix = "exxon"; // set for your needs
+
+/**
+ * ClientIDs, I use an array for having all here.
+ */
+var clientIDs = {
+        addax:   "'C30023','C31021'",
+        afren:   "'C31216','C31221','C31220','C31145','C31236'",
+        agip:    "'C10001','C10161','C31056'",
+        chevron: "'C10047','C10228','C10244','C21078'",
+        exxon:   "'C10151','C10086'",
+        shell:   "'C10212','C10214'",
+        npdc:    "'C31084'",
+}
+// select the clientID consistent with the userRolePrefix
+var clientID = clientIDs[userRolePrefix];
+
+/**
+ * Logos, I use an array for having all here.
+ */
+var companyLogos = {
+        addax:   "img/logo_addax.jpg",
+        afren:   "img/logo_afre.png",
+        agip:    "img/logo_agip_500_alpha.png",
+        chevron: "img/logo_chevron_shor.png",
+        exxon:   "img/logo_exxonmobil_short.png",
+        shell:   "img/logo_shell.png",
+        npdc:    "img/NPDC.png",
+}
+// select the logo consistent with the userRolePrefix
+var companyLogo = companyLogos[userRolePrefix];
+
+// some visibility on fields
+var showclientsapprovalname2 = false; // true only for total and chevron
+var showentity = false; // true only for total
+var extotruckmandatory = true; // false only for total and addax
+var chargecode = false; // true only for chevron

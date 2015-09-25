@@ -1,0 +1,226 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="page">
+            <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="javascript:void(0);" onclick="changePage('report-activities.html',['report-activities.js']);"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><p class="navbar-text" id="joJnLabel"></p></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick links <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a onclick="newActivity();" href="javascript:void(0);">New Activity</a></li>
+                                    <li><a href="javascript:void(0);" onclick="cloneAct(localStorage.actID)">Clone</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="container-fluid">
+                <!--
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="vesselName" class="col-sm-5 control-label text-right form-row">Vessel Name</label>
+                        <div class="col-sm-7">
+                            <input id="vesselName" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="exVessel" class="col-sm-5 control-label text-right form-row">ExVessel</label>
+                        <div class="col-sm-7">
+                            <input id="exVessel" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="toVessel" class="col-sm-5 control-label text-right form-row">ToVessel</label>
+                        <div class="col-sm-7">
+                            <input id="toVessel" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                -->
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="exTruck" class="col-sm-5 control-label text-right form-row">ExTruck</label>
+                        <div class="col-sm-7">
+                            <input type="text" id="exTruck" name="exTruck" style="width:100%" class="form-control" value="" maxlength="60" onblur="updateData(true,'actID',localStorage.actID,'activities','exTruck',$(this).val())"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="toTruck" class="col-sm-5 control-label text-right form-row">ToTruck</label>
+                        <div class="col-sm-7">
+                            <input type="text" id="toTruck" name="toTruck" style="width:100%" class="form-control" value="" maxlength="60" onblur="updateData(true,'actID',localStorage.actID,'activities','toTruck',$(this).val())"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="dedicTrk" class="col-sm-5 control-label text-right form-row">Truck</label>
+                        <div class="col-sm-7">
+                            <input id="dedicTrk" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="dedicEq" class="col-sm-5 control-label text-right form-row">Equipment</label>
+                        <div class="col-sm-7">
+                            <input id="dedicEq" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="fromBaseID" class="col-sm-5 control-label text-right form-row mandatory">Origin</label>
+                        <div class="col-sm-7">
+                            <input id="fromBaseID" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="fromBaseID" class="col-sm-5 control-label text-right form-row">New Origin</label>
+                        <div class="col-sm-7">
+                            <input type="text" id="otherOrigin" name="otherOrigin" style="width:100%" class="form-control" value="" maxlength="60" onkeyup="if ($.trim($('#otherOrigin').val()).length) deleteOrigin();" onblur="updateNewOrigDest(this,'fromBaseID');"/>
+                        </div>
+                    </div>
+                </div>
+                -->
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="toBaseID" class="col-sm-5 control-label text-right form-row mandatory">Destination</label>
+                        <div class="col-sm-7">
+                            <input id="toBaseID" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="fromBaseID" class="col-sm-5 control-label text-right form-row">New Destination</label>
+                        <div class="col-sm-7">
+                            <input type="text" id="otherDestination" name="otherDestination" style="width:100%" class="form-control" value="" maxlength="60" onkeyup="if ($.trim($('#otherDestination').val()).length) deleteDestination();" onblur="updateNewOrigDest(this,'toBaseID');"/>
+                        </div>
+                    </div>
+                </div>
+                -->
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="locationID" class="col-sm-5 control-label text-right form-row mandatory">Location</label>
+                        <div class="col-sm-7">
+                            <input id="locationID" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="supplierID" class="col-sm-5 control-label text-right form-row mandatory">Supplier</label>
+                        <div class="col-sm-7">
+                            <input id="supplierID" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="newSupplier" class="col-sm-5 control-label text-right form-row">New Supplier</label>
+                        <div class="col-sm-7">
+                            <input type="text" style="width:100%" class="form-control" id="newSupplier" name="newSupplier" value="" maxlength="50" onkeyup="if ($.trim($('#newSupplier').val()).length) deleteSupplier();" onblur="updateNewSupplier(this)"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="finalClientID" class="col-sm-5 control-label text-right form-row">Final client</label>
+                        <div class="col-sm-7">
+                            <input id="finalClientID" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <!-- Nascosto perché spostato a livello di report
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="custProjID" class="col-sm-5 control-label text-right form-row">Customer Project</label>
+                        <div class="col-sm-7">
+                            <input id="custProjID" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                -->
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="blockID" class="col-sm-5 control-label text-right form-row">Customer Block</label>
+                        <div class="col-sm-7">
+                            <input id="blockID" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="fieldID" class="col-sm-5 control-label text-right form-row">Customer Field</label>
+                        <div class="col-sm-7">
+                            <input id="fieldID" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="well" class="col-sm-5 control-label text-right form-row">Customer Well</label>
+                        <div class="col-sm-7">
+                            <input id="wellID" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="tpsp" class="col-sm-5 control-label text-right form-row">Th.Party Service Provider</label>
+                        <div class="col-sm-7">
+                            <input type="text" style="width:100%" class="form-control" id="tpsp" name="tpsp" value="" maxlength="50" onblur="updateData(true,'actID',localStorage.actID,'activities','tpsp',$(this).val())"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="tpwn" class="col-sm-5 control-label text-right form-row">Th.Party Waybill Number</label>
+                        <div class="col-sm-7">
+                            <input type="text" style="width:100%" class="form-control" id="tpwn" name="tpwn" value="" maxlength="50" onblur="updateData(true,'actID',localStorage.actID,'activities','tpwn',$(this).val())"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <nav id="footer-nav" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#" onclick="event.preventDefault();changePage('activity-measure.html',['activity-measure.js']);">Measure</a></li>
+                            <li class="active"><a href="#" onclick="event.preventDefault();changePage('activity-location.html',['activity-location.js']);">Location</a></li>
+                            <li><a href="#" onclick="event.preventDefault();changePage('activity-equipment.html',['jquery.touch-multiselect.js','activity-equipment.js']);">Equipment</a></li>
+                            <li><a href="#" onclick="event.preventDefault();changePage('activity-pics.html',['activity-pics.js','iscroll.js']);">Pics</a></li>
+                            <li><a href="#" onclick="event.preventDefault();changePage('activity-misc.html',['activity-misc.js']);">Misc</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#" onclick="changePage('activity-location.html',['activity-location.js'])">
+                                    <span class="glyphicon glyphicon-refresh"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+        </div>
+    </body>
+</html>

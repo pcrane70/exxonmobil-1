@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <div id="page">
+            <div id="header">
+                <div class="buttonH">
+                    <input type="button" onclick="changePage('report-list.html',['report-list.js'])" value="" style="background: transparent url('img/ic_action_view_as_list.png') no-repeat center center;"> 
+                </div>
+                <div class="titleH">
+                    <span id="title">Report review</span>
+                </div>
+            </div>
+            <div id="content">
+                <div class="clear">
+                    <div class="row">
+                        <label for="joJn">JO/JS No.</label>
+                        <div class="inputRO big">
+                            <div id="joJn"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="manNo">Manifest No.</label>
+                        <div class="inputRO big">
+                            <div id="manNo"></div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <label for="bookNo">Booking No.</label>
+                        <div class="inputRO big">
+                            <div id="bookNo"></div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <label for="callNo">Call No.</label>
+                        <div class="inputRO big">
+                            <div id="callNo"></div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <label for="servDate">Date</label>
+                        <div class="inputRO big">
+                            <div id="servDate"></div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                    <label for="vesselName">Vessel Name</label>
+                    <div class="inputRO big">
+                        <div id="vesselName"></div>
+                    </div>
+                </div> 
+                    <div class="row">
+                        <label for="clientName">Client</label>
+                        <div class="inputRO big">
+                            <div id="clientName"></div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <label for="repTypeName">Report Type</label>
+                        <div class="inputRO big">
+                            <div id="repTypeName"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <label for="startDate">Job start</label>
+                    <div class="inputRO big">
+                        <div id="startDate"></div>
+                    </div>
+                </div> 
+                <div class="row">
+                    <label for="endDate">Job end</label>
+                    <div class="inputRO big">
+                        <div id="endDate"></div>
+                    </div>
+                </div>
+                    <div class="row">
+                        <label for="joJn">Prepared By</label>
+                        <div class="inputRO big">
+                            <div id="preparedBy"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="joJn">Checked By</label>
+                        <div class="inputRO big">
+                            <div id="checkedBy"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="joJn">Base Superintendents Name</label>
+                        <div class="inputRO big">
+                            <div id="baseSuperintendentsName"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="joJn">Customer Approval Name</label>
+                        <div class="inputRO big">
+                            <div id="clientsApprovalName"></div>
+                        </div>
+                    </div>
+                    <div class="row"></div>
+                    <div class="row"><h1>
+                        Activities
+                    </h1></div>
+                    <div id="activities"></div>
+                </div>
+            </div>
+            
+            
+            <div id="footer" class="idleConn">
+                <a href="#" onclick="event.preventDefault();changePage('report-general.html',['report-general.js']);">General</a> 
+                <a href="#" onclick="event.preventDefault();changePage('closed-report-review.html',['jquery-ui.min.js','closed-report-review.js']);">Review</a> 
+            </div>
+        </div>
+    </body>
+</html>

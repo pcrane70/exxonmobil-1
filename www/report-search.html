@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title> 
+    </head> 
+    <body>
+        <div id="page">
+            <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="javascript:void(0);" onclick="changePage('report-list.html',['report-list.js'])"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <input type="text" style="width:140%;margin-left:-40%" class="form-control hasclear" id="search" name="search" placeholder="Type your JOB or MANIFEST number" value="" onkeyup="renderReportsList()" />
+                            </li>
+                            <li>
+                                <span class="clearer glyphicon glyphicon-remove-circle form-control-feedback" onclick="clearSearch()" style="top:12px;left:7px;"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="content" class="panel-list-container">
+                <div id="panelList"></div>
+            </div>
+            <nav id="footer-nav" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+              <div class="container">
+				<div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#" onclick="userLogout(event);">Logout</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                </div><!--/.nav-collapse -->
+              </div>
+            </nav>
+        </div>
+    </body>
+</html>

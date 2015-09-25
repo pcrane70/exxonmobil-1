@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="page">
+            <div id="content">
+                <div class="panel panel-intels">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">SIGN IN</h3>
+                    </div>
+                    <div class="panel-body" >
+                        <p style="text-align:center;">
+                            <img class="companyLogo" src="" />
+                            <br /><br />
+                        </p>
+                        <p style="position:relative;">
+                            <select id="userID" placeholder="Select a user" style="width:100%"></select>
+                        </p>
+                        <p>
+                            <input type="password" id="userPsw" name="userPsw" value="" maxlength="15" placeholder="Type password" style="width:100%" class="form-control">
+                        </p>
+                        <p>
+                            <button type="button" id="signin" name="signin" onclick="checkUserLogin()" class="pull-right btn btn-intels">Sign in</button>
+                        </p>
+                        <!--<p>
+                            <button type="button" id="update" name="update" onclick="window.open('http://fda.orleaninvest.com/fda', '_blank', 'location=no');" class="btn btn-intels">Check New Versions</button>
+                        </p>-->
+                    </div>
+                </div>
+                <nav id="footer-nav" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                    <div class="container">
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                            	<li><span id="sn" style="margin-top: 10px;display: inline-block;"></span></li>
+                        	</ul>
+                            
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">DB Maintenance <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        
+                                        <li><a href="index.html">Update database</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#" onclick="dropTables(event);">Drop database</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </body>
+</html>
+

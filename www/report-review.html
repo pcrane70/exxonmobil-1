@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <div id="page">
+            <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="javascript:void(0);" onclick="changePage('report-general.html',['report-general.js']);"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><p class="navbar-text" id="joJnLabel"></p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="container-fluid">
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="clientName" class="col-sm-5 control-label text-right form-row">Client</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="clientName">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="joJn" class="col-sm-5 control-label text-right form-row">JO/JS No.</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="joJn">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="manNo" class="col-sm-5 control-label text-right form-row">Manifest No.</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="manNo">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="bookNo" class="col-sm-5 control-label text-right form-row">Booking No.</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="bookNo">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="callNo" class="col-sm-5 control-label text-right form-row">Call No.</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="callNo">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="servDate" class="col-sm-5 control-label text-right form-row">Date</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="servDate">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="vesselName" class="col-sm-5 control-label text-right form-row">Vessel Name</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="vesselName">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="repTypeName" class="col-sm-5 control-label text-right form-row">Report Type</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="repTypeName">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="startDate" id="startDateLabel" class="col-sm-5 control-label text-right form-row">Job start</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="startDate">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="endDate" class="col-sm-5 control-label text-right form-row">Job end</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="endDate">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="preparedBy" id="preparedByLabel" class="col-sm-5 control-label text-right form-row">Prepared by</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="preparedBy">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="checkedBy" id="checkedByLabel" class="col-sm-5 control-label text-right form-row">Checked by</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="checkedBy">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="baseSuperintendentsName" class="col-sm-5 control-label text-right form-row">Base Superintendent</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="baseSuperintendentsName">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="clientsApprovalName" class="col-sm-5 control-label text-right form-row">Client Approval Name</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="clientsApprovalName">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="clientsApprovalName2" class="col-sm-5 control-label text-right form-row">Client Approval Name 2</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="clientsApprovalName2">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="entity" class="col-sm-5 control-label text-right form-row">Entity</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="entity">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="" class="col-sm-5 control-label text-right form-row">Report signature</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="signature-msg">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="" class="col-sm-5 control-label text-right form-row" id="errors-msg-label">Report check</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="errors-msg">Report is OK</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="activities" class="panel-group"></div>
+                <div class="row no-margin userLevel0 userLevel2 userLevel4" id="signage" style="display:none;">
+                    <div class="form-group">
+                        <label for="" class="col-sm-5 control-label text-right form-row"></label>
+                        <div class="col-sm-7">
+                            <div class="form-row pull-right"><a class="btn btn-intels" href="javascript:void(0);" onclick="closeCMR();">Sign and close</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-default navbar-fixed-bottom" id="footer-nav" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#" onclick="event.preventDefault();changePage('report-general.html',['report-general.js']);">General</a></li>
+                            <li class="userLevel0"><a href="#" id="activitiesLink" onclick="event.preventDefault();changePage('report-activities.html',['report-activities.js']);">Activities</a></li>
+                            <li class="active"><a id="CMRStatus" onclick="event.preventDefault();changePage('report-review.html',['report-review.js'])" href="#">Review</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#" onclick="changePage('report-review.html',['report-review.js'])">
+                                    <span class="glyphicon glyphicon-refresh"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+        </div>
+    </body>
+</html>

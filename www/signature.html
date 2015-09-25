@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <div id="page">
+            <div id="header">
+                <div class="buttonH">
+                    <input type="button" onclick="changePage('report-review.html',['jquery-ui.min.js','report-review.js']);" value="" style="background: transparent url('img/ic_action_previous_item.png') no-repeat center center;"> 
+                </div>
+                <div class="titleH">
+                    <span>Report approvals</span>
+                </div>
+            </div>
+            <div id="content">
+                <div class="row">
+                    <h1>
+                        Sign below
+                    </h1>
+                </div>
+                <div class="row">
+                      <form method="post" action="" class="sigPad">
+
+
+
+    <!--<ul class="sigNav">
+      <li class="drawIt"><a href="#draw-it" >Draw It</a></li>
+      <li class="clearButton"><a href="#clear">Clear</a></li>
+    </ul>-->
+    <div class="sig sigWrapper">
+      <canvas class="pad" width="700" height="500"></canvas>
+      <input type="hidden" name="output" class="output">
+    </div>
+  </form>
+                </div>
+                <div class="row">
+                    <input type="button" id="clear" value="Clear signature" onclick="signature.clearCanvas();"/>   
+                    <input type="button" id="approve" value="Approve report and close" onclick="getSignature();"/>      	            
+               </div>
+            </div>
+            
+            
+            <div id="footer">
+                <!--<a href="#" onclick="switchPanel('report-panel',event)">General</a> 
+                <a href="#" onclick="switchPanel('types-panel')">Act. Types</a> 
+                <a href="#" onclick="switchPanel('activity-panel',event)">Activities</a> 
+                <a href="#" onclick="switchPanel('approval-panel',event)">Approvals</a>-->
+                <!--<a href="report-list.html">Reports</a> 
+                <a href="new-report.html">New Report</a> 
+                <a href="#">-</a>
+                <a href="#" onclick="userLogout(event)">Logout</a>-->
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="page">
+            <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="javascript:void(0);" onclick="changePage('report-activities.html',['report-activities.js']);"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><p class="navbar-text" id="joJnLabel"></p></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick links <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a onclick="newActivity();" href="javascript:void(0);">New Activity</a></li>
+                                    <li><a href="javascript:void(0);" onclick="cloneAct(localStorage.actID)">Clone</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="container-fluid" style="display:none;">
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="comms" class="col-sm-12 control-label form-row">Pool Equipment</label>
+                        <div class="col-sm-12">
+                            <input id="eqTypes" class="" type="hidden">
+                        </div>
+                        <label for="comms" class="col-sm-12 control-label form-row">Dedicated Equipment</label>
+                        <div class="col-sm-12">
+                            <input id="eqDedicTypes" class="" type="hidden">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="marks" class="col-sm-12 control-label form-row">Equipment Remarks</label>
+                        <div class="col-sm-12">
+                            <textarea style="height: 150px;text-transform:uppercase;" class="form-control" id="marks" name="marks" autocomplete="off" onblur="updateData(true,'actID',localStorage.actID,'activities','marks',$(this).val())"></textarea>
+                        </div>
+                    </div>
+                </div>
+            <!--<div id="content">
+                <div id="eqCategories">
+                </div>
+                <div id="selTypes">
+                    <h1>Selected equipments</h1>
+                    <div>
+                        <select multiple="multiple" id="eqTypeID" name="eqTypeID" class="multiple" size="10">
+                        </select>
+                    </div>
+                </div>
+            </div>-->
+            <nav id="footer-nav" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#" onclick="event.preventDefault();changePage('activity-measure.html',['activity-measure.js']);">Measure</a></li>
+                            <li><a href="#" onclick="event.preventDefault();changePage('activity-location.html',['activity-location.js']);">Location</a></li>
+                            <li class="active"><a href="#" onclick="event.preventDefault();changePage('activity-equipment.html',['jquery.touch-multiselect.js','activity-equipment.js']);">Equipment</a></li>
+                            <li><a href="#" onclick="event.preventDefault();changePage('activity-pics.html',['activity-pics.js','iscroll.js']);">Pics</a></li>
+                            <li><a href="#" onclick="event.preventDefault();changePage('activity-misc.html',['activity-misc.js']);">Misc</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#" onclick="changePage('activity-equipment.html',['activity-equipment.js'])">
+                                    <span class="glyphicon glyphicon-refresh"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+    	</div>
+    </body>
+</html>

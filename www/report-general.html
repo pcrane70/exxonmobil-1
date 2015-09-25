@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="page">
+            <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="javascript:void(0);" onclick="goBack()"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><p class="navbar-text" id="joJnLabel"></p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="container-fluid">
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="clientName" class="col-sm-5 control-label text-right form-row">Client</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="clientName">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="joJn" class="col-sm-5 control-label text-right form-row">JO/JS No.</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="joJn">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="manNo" class="col-sm-5 control-label text-right form-row">Manifest No.</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="manNo">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="bookNo" class="col-sm-5 control-label text-right form-row">Booking No.</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="bookNo">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="callNo" class="col-sm-5 control-label text-right form-row">Call No.</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="callNo">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="servDate" class="col-sm-5 control-label text-right form-row">Date</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="servDate">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="customerProject" class="col-sm-5 control-label text-right form-row">Customer Project</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="customerProject">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="vesselName" class="col-sm-5 control-label text-right form-row">Vessel Name</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="vesselName">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="repTypeName" class="col-sm-5 control-label text-right form-row">Report Type</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="repTypeName">PCC</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="startDate" class="col-sm-5 control-label text-right form-row mandatory">Job start</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="startDate">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="endDate" class="col-sm-5 control-label text-right form-row">Job end</label>
+                        <div class="col-sm-7">
+                            <div class="form-row" id="endDate">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                        <div class="form-group">
+                            <label for="" class="col-sm-5 control-label text-right form-row">Report signature</label>
+                            <div class="col-sm-7">
+                                <div class="form-row" id="signature-msg"></div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="preparedBy" class="col-sm-5 control-label text-right form-row mandatory">Prepared by</label>
+                        <div class="col-sm-7">
+                            <input id="preparedBy" class="inputLevel2 inputLevel3 inputLevel4" type="hidden" disabled="disabled">
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="checkedBy" class="col-sm-5 control-label text-right form-row mandatory">Checked by</label>
+                        <div class="col-sm-7">
+                            <input id="checkedBy" class="inputLevel2 inputLevel3 inputLevel4" type="hidden" disabled="disabled">
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="baseSuperintendentsName" class="col-sm-5 control-label text-right form-row">Base Superintendent</label>
+                        <div class="col-sm-7">
+                            <input id="baseSuperintendentsName" class="inputLevel3 inputLevel4" type="hidden" disabled="disabled"><!-- #10/03/2015 Fabrizio, rimossi stili inputLevel3 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="clientsApprovalName" class="col-sm-5 control-label text-right form-row">Client Approval Name</label>
+                        <div class="col-sm-7">
+                            <input id="clientsApprovalName" class="inputLevel4" type="hidden" disabled="disabled"><!-- #10/03/2015 Fabrizio, rimossi stili inputLevel2 inputLevel3 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin" style="display:none;"  id="clientsApprovalName2-row">
+                    <div class="form-group">
+                        <label for="clientsApprovalName2" class="col-sm-5 control-label text-right form-row">Client Approval Name 2</label>
+                        <div class="col-sm-7">
+                            <input id="clientsApprovalName2" class="inputLevel4" type="hidden" disabled="disabled"><!-- #10/03/2015 Fabrizio, rimossi stili inputLevel2 inputLevel3 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin" style="display:none;" id="entity-row">
+                    <div class="form-group">
+                        <label for="entity" class="col-sm-5 control-label text-right form-row">Entity</label>
+                        <div class="col-sm-7">
+                            <input id="entity" class="inputLevel2 inputLevel3 inputLevel4" type="hidden" disabled="disabled">
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="reopenButton" class="col-sm-5 control-label text-right form-row"></label>
+                        <div class="col-sm-7">
+                            <a id="reopenButton" class="btn btn-intels" href="#" onclick="$('#reopenModal').modal('show');" style="display:none;">Reopen Job</a>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="row no-margin">
+                    <div class="form-group">
+                        <label for="" class="col-sm-5 control-label text-right form-row">&nbsp;</label>
+                        <div class="col-sm-7">
+                            <div class="form-row">&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin">
+                    <div class="form-group">
+                        <label for="CMRStatus" class="col-sm-5 control-label text-right form-btn-row">CMR status</label>
+                        <div class="col-sm-7">
+                            <a class="btn btn-intels" id="CMRStatus" onclick="changePage('report-review.html',['report-review.js'])" href="javascript:void(0);">Review &amp; Close</a>
+                           </div>
+                    </div>
+                </div>-->
+                
+            </div>
+            <nav id="footer-nav" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#" onclick="event.preventDefault();changePage('report-general.html',['report-general.js']);">General</a></li>
+                            <li class="userLevel0"><a href="#" id="activitiesLink" onclick="event.preventDefault();changePage('report-activities.html',['report-activities.js']);">Activities</a></li>
+                            <li><a id="CMRStatus" onclick="event.preventDefault();changePage('report-review.html',['report-review.js'])" href="#">Review</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#" onclick="changePage('report-general.html',['report-general.js'])">
+                                    <span class="glyphicon glyphicon-refresh"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+            
+            <div id="reopenModal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h3 class="modal-title">Reopen Job</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row no-margin">
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="form-row">What is the reason for job opening?</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-margin">
+                                <div class="form-group">
+                                    <label for="inputError" class="col-sm-10 control-label text-right form-row">Data input error by Intels Staff</label>
+                                    <div class="col-sm-2">
+                                        <span style="font-size:35px;" class="glyphicon glyphicon-unchecked" onclick="event.stopPropagation();resetOptions(this);updateCheckbox(this);">
+                                            <input type="checkbox" name="idReason" value="1" style="display:none;">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-margin">
+                                <div class="form-group">
+                                    <label for="wrongAdvice" class="col-sm-10 control-label text-right form-row">Wrong advice by Client or 3rd party</label>
+                                    <div class="col-sm-2">
+                                        <span style="font-size:35px;" class="glyphicon glyphicon-unchecked" onclick="event.stopPropagation();resetOptions(this);updateCheckbox(this);">
+                                            <input type="checkbox" name="idReason" value="2" style="display:none;">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-margin">
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="form-row">(Tick where applicable) or if other reasons please specify in remarks.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-margin">
+                                <div class="form-group">
+                                    <label for="note" class="col-sm-12 control-label form-row">Remarks</label>
+                                    <div class="col-sm-12">
+                                        <textarea style="height: 150px;text-transform:uppercase;" class="form-control" name="note"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" id="reopenModalButton">Reopen Job</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- reopenModal -->
+            
+        </div>
+    </body>
+</html>

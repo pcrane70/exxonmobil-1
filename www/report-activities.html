@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="page">
+            <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="javascript:void(0);" onclick="goBack()"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><p class="navbar-text" id="joJnLabel"></p></li>
+                            <li><a href="javascript:void(0);" onclick="newActivity()">New Activity</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="container-fluid" style="display:none;" class="panel-list-container">
+                <div id="panelList"></div>
+            </div>
+            <nav id="footer-nav" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#" onclick="event.preventDefault();changePage('report-general.html',['report-general.js']);">General</a></li>
+                            <li class="active"><a href="#" onclick="event.preventDefault();changePage('report-activities.html',['report-activities.js']);">Activities</a></li>
+                            <li><a id="CMRStatus" onclick="event.preventDefault();changePage('report-review.html',['report-review.js'])" href="#">Review</a></li>
+                            <li><a onclick="moveMultipleActivityGetJobNumber()" href="#">Move</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#" onclick="changePage('report-activities.html',['report-activities.js'])">
+                                    <span class="glyphicon glyphicon-refresh"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+            
+            <div id="moveModal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h3 class="modal-title">Multiple Move</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row no-margin">
+                                <div class="form-group">
+                                    <label for="moveJob" class="col-sm-5 control-label text-right form-row">Move this activity to</label>
+                                    <div class="col-sm-7">
+                                        <input id="moveJob" class="" type="hidden"><br/>
+                                        <a class="btn btn-intels" onclick="moveMultipleActivity($('#moveJob').val());" href="javascript:void(0);">Move this activity</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="col-sm-5 control-label text-right form-row">or</label>
+                                    <div class="col-sm-7">
+                                        <a class="btn btn-intels" onclick="sendToSBS();" href="javascript:void(0);">
+                                            Send to SBS
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- #modeModal -->
+            
+        </div><!-- #page -->
+    </body>
+</html>

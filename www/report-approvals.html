@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="page">
+            <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#" onclick="changePage('report-list.html',['report-list.js'])"><span class="glyphicon glyphicon-backward"></span></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><p class="navbar-text" id="">Job Number</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+                <div class="row mandatoryForm">
+                    <label for="preparedBy">Prepared by</label>
+                    <div class="input">
+                        <input id="preparedBy" class="typeahead preparedBy inputLevel2 inputLevel3" type="text" data-items="10" placeholder="" disabled="disabled">
+                        <!--<select id="preparedBy" name="preparedBy" onchange="updateData(true,'fdaID',localStorage.fdaID,'reports','preparedBy',$(this).val())">
+                        </select>-->
+                    </div>
+                </div>  
+                <div class="row mandatoryForm">
+                    <label for="checkedBy">Checked by</label>
+                    <div class="input">
+                        <input id="checkedBy" class="typeahead checkedBy inputLevel2 inputLevel3" type="text" data-items="10" placeholder="" disabled="disabled">
+                        <!--<select id="checkedBy" name="checkedBy" onchange="updateData(true,'fdaID',localStorage.fdaID,'reports','checkedBy',$(this).val())">
+                        </select>-->
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="baseSuperintendentsName">Base Superintendent</label>
+                    <div class="input">
+                                      <input id="baseSuperintendentsName" class="typeahead baseSuperintendentsName inputLevel3" type="text" data-items="10" placeholder="" disabled="disabled">
+                        <!--<select id="baseSuperintendentsName" name="baseSuperintendentsName" onchange="updateData(true,'fdaID',localStorage.fdaID,'reports','baseSuperintendentsName',$(this).val())">
+                        </select>-->
+                    </div>
+                </div>  
+                <div class="row">
+                    <label for="clientsApprovalName">Client Approval Name</label>
+                    <div class="input">
+                         <input id="clientsApprovalName" class="typeahead clientsApprovalName  inputLevel2 inputLevel3" type="text" data-items="10" placeholder=""  disabled="disabled">
+                        <!--<select id="clientsApprovalName" name="clientsApprovalName" onchange="updateData(true,'fdaID',localStorage.fdaID,'reports','clientsApprovalName',$(this).val())">
+                        </select>-->
+                    </div>
+                </div> 
+                <div class="row">
+                    
+                </div>
+                <div class="row">
+                    <label for="CMRStatus">CMR status</label>
+                    <div class="input">
+                        <input type="button" id="CMRStatus" onclick="changePage('report-review.html',['jquery.signaturepad.min.js','json2.min.js','jquery-ui.min.js','report-review.js'])" value="Review &amp; Close" class=""/>
+                        <!--<span id="status"></span>-->
+                    </div>
+                </div>        
+            </div>
+            <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                <div class="container">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#" onclick="event.preventDefault();changePage('report-general.html',['report-general.js']);">General</a></li>
+                            <li><a href="#" onclick="event.preventDefault();changePage('report-activities.html',['report-activities.js']);">Activities</a></li>
+                            <li class="active"><a href="#" class="userLevel2" style="display:none" onclick="event.preventDefault();changePage('report-approvals.html',['report-approvals.js']);">Approvals</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+        </div>
+    </body>
+</html>
